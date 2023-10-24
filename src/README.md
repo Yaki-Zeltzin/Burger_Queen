@@ -1,1 +1,0 @@
-#Tablet application for a restaurant
