@@ -6,7 +6,9 @@ const App = () => {
   return (
     <div>
         <MainHeader />
-        <Outlet />
+        <div className="Poner espacio para bajar los componentes">
+          <Outlet />
+        </div>
     </div>
   )
 }
