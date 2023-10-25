@@ -1,4 +1,4 @@
-const Kitchen = () => {
+const CookPage = () => {
     return (
         <>
             <h1>Cocina</h1>
@@ -6,4 +6,4 @@ const Kitchen = () => {
     )
 }
 
-export default Kitchen
+export default CookPage

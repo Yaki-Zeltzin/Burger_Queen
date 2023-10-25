@@ -1,9 +1,11 @@
 import { createBrowserRouter } from "react-router-dom"
 import Error404 from "../components/pages/Error404"
-import Home from "../components/pages/Home"
 import App from "../components/templates/App"
-import Orders from "../components/pages/Orders"
 import Login from "../components/pages/Login"
+import PageOrders from "../components/pages/PageOrders"
+import CookPage from "../components/pages/CookPage"
+import RegisterStaff from "../components/pages/RegisterStaff"
+import PageWorkers from "../components/pages/PageWorkers"
 
 const router = createBrowserRouter([
     {
@@ -13,18 +15,25 @@ const router = createBrowserRouter([
         children:[
             {
                 index: true,
-                element: <Home />,
+                element: <PageOrders />,
             },
             {
-                path: "/orders",
-                element: <Orders />,
+                path: "/mealPrep",
+                element: <CookPage />,
             }
         ]
     },
     {
         path: "/login",
-        element: <Login />
-    }
+        element: <Login />,
+    },
+    {
+        path: "/register",
+        element: <RegisterStaff />,
+    },{
+        path: "/pageWorkers",
+        element: <PageWorkers />,
+    },
 ])
 
 export default router

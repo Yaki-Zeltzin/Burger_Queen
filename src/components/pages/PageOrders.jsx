@@ -1,6 +1,6 @@
 import { API_URL } from "../../constants/env"
 
-const Home = () => {
+const PageOrders = () => {
 
   return (
     <>
@@ -9,4 +9,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default PageOrders

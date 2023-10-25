@@ -34,7 +34,6 @@ const Login = () => {
             .catch(error => {
                 setError(error)
             })
-
     }
 
     return (
@@ -66,9 +65,8 @@ const Login = () => {
                 </div>
                 {error && (
                     <p className="error">{error?.response?.data}</p>
-                )} 
+                )}
             </form>
-
         </div>
     )
 }
