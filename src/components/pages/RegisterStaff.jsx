@@ -1,5 +1,5 @@
 import axios from "axios"
-import image from "../../assets/images/Group 8(1).png"
+import image from "../../assets/images/logo1.png"
 import { API_URL } from "../../constants/env"
 import { token } from "../../helpers/auth"
 import "../../styles/index.css"

@@ -4,7 +4,7 @@ import { token } from "../../helpers/auth"
 
 import { useEffect, useState } from "react"
 
-const PageOrders = () => {
+const Table = () => {
   const [data, setData] = useState([])
   
    useEffect(() => {
@@ -35,4 +35,4 @@ const PageOrders = () => {
   )
 }
 
-export default PageOrders
+export default Table

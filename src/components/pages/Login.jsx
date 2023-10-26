@@ -24,10 +24,10 @@ const Login = () => {
                 setToken(resp.data.accessToken)
                 if (resp.data.user.role === "waiter") {
                     nav("/")
-                }
-                // } else if (resp.data.user.role === "admin") {
-                //     nav("/admin")
-                // } else {
+                 } else if (resp.data.user.role === "admin") {
+                     nav("/addProducts")
+                 } 
+                 //else {
                 //     nav("/chef")
                 // }
             })
