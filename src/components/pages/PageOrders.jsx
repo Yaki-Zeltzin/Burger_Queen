@@ -3,6 +3,7 @@ import { API_URL } from "../../constants/env"
 import { token } from "../../helpers/auth"
 
 import { useEffect, useState } from "react"
+import ProductCard from "../molecules/ProductCard"
 
 const PageOrders = () => {
   const [data, setData] = useState([])
@@ -24,10 +25,13 @@ const PageOrders = () => {
     <>
     <h1>Productos</h1>
     
-    {data.map(prod => (
-      <div key={prod.id}>
-      {JSON.stringify(prod.name)}
-      </div>
+    {data.map((prod) => (
+     <ProductCard 
+      key={prod.id} 
+      name={prod.name}
+      price={prod.price}
+      image={prod.image}
+      />
 
     ))
     }

@@ -25,7 +25,7 @@ const Login = () => {
                 if (resp.data.user.role === "waiter") {
                     nav("/")
                  } else if (resp.data.user.role === "admin") {
-                     nav("/addProducts")
+                     nav("/admin/addProducts")
                  } 
                  //else {
                 //     nav("/chef")

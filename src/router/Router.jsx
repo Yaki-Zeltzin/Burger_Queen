@@ -7,6 +7,7 @@ import CookPage from "../components/pages/CookPage"
 import RegisterStaff from "../components/pages/RegisterStaff"
 import PageWorkers from "../components/pages/PageWorkers"
 import Form from "../components/pages/admin/products/Form"
+import Table from "../components/pages/admin/products/Table"
 
 const router = createBrowserRouter([
     {
@@ -36,7 +37,11 @@ const router = createBrowserRouter([
         element: <PageWorkers />,
     },
     {
-        path: "/addProducts",
+        path: "/admin/products",
+        element: <Table />,
+    },
+    {
+        path: "/admin/addProducts",
         element: <Form />,
     },
 ])
