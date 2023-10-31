@@ -44,6 +44,10 @@ const router = createBrowserRouter([
         path: "/admin/addProducts",
         element: <Form />,
     },
+    {
+        path: "/admin/products/:id",
+        element: <Form />,
+    },
 ])
 
 export default router

@@ -22,12 +22,14 @@ const Table = () => {
   }, [])
 
   const deleteProduct = (prod) => {
+    if(window.confirm("Estas seguro de eliminar?")) {
     axios.delete(`${API_URL}/products/${prod.id}`, {
       headers: {
         'Authorization': `Bearer ${token()}`,
     },
     })
     .then(() => alert("producto eliminado"))
+  }
   }
 
   return (
@@ -45,14 +47,14 @@ const Table = () => {
             <th>Borrar</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody>  
           {
             data.map((prod) => (
               <tr key={prod.id}>
                 <td>{prod.name}</td>
                 <td>{prod.price}</td>
                 <td>
-                  <Link to={`/admin/products-edit/${prod.id}`}>Editar</Link>
+                  <Link to={`/admin/products/${prod.id}`}>Editar</Link>
                 </td>
                 <td>
                   <a onClick={() => deleteProduct(prod)}>Eliminar</a>

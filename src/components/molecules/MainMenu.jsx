@@ -28,19 +28,25 @@ const MainMenu = () => {
                         Administrador
                     </Link>
                 </li>
-                {
-                    !token() ? (
+                {!token() ? (
                         <li>
                             <Link to="/login">
                                 Iniciar sesión
                             </Link>
                         </li>
                     ) : (
+                       <>
+                       <li>
+                            <Link to="/admin/products">
+                                Administrar productos
+                            </Link>
+                        </li>
                         <li>
                             <a onClick={handleSesion}>
                                 Cerrar sesión
                             </a>
                         </li>
+                       </>
                     )
                 }
             </ul>

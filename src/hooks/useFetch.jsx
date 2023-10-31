@@ -21,6 +21,7 @@ const useFetch = (endpoint, headers = {}) => {
             })
             .finally(() => {
                 setLoading(false)
+                
             })
     }, [])
 
