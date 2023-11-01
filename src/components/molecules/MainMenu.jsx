@@ -24,7 +24,7 @@ const MainMenu = () => {
                     </Link>
                 </li>
                 <li>
-                    <Link to="/Admin">
+                    <Link to="/admin/products">
                         Administrador
                     </Link>
                 </li>
@@ -35,18 +35,13 @@ const MainMenu = () => {
                             </Link>
                         </li>
                     ) : (
-                       <>
-                       <li>
-                            <Link to="/admin/products">
-                                Administrar productos
-                            </Link>
-                        </li>
+
                         <li>
                             <a onClick={handleSesion}>
                                 Cerrar sesión
                             </a>
                         </li>
-                       </>
+                       
                     )
                 }
             </ul>

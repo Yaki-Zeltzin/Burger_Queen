@@ -2,13 +2,13 @@
 
 import { Outlet } from "react-router-dom"
 import MainHeader from "../organisms/MainHeader"
-import MainMenu from "../molecules/MainMenu"
+import ChefMenu from "../molecules/ChefMenu"
 
-const App = () => {
+const Chef = () => {
   return (
     <div>
         <MainHeader >
-          <MainMenu/>
+          <ChefMenu />
         </MainHeader>
         <div className="Poner espacio para bajar los componentes">
           <Outlet />
@@ -17,4 +17,4 @@ const App = () => {
   )
 }
 
-export default App
+export default Chef

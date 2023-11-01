@@ -47,6 +47,7 @@ const RegisterStaff = () => {
                         <input required
                             type="text"
                             name="fullName"
+                            defaultValue={"Nombre"}
                         />
                     </div>
                     <div className="field">
@@ -54,6 +55,7 @@ const RegisterStaff = () => {
                         <input required
                             type="email"
                             name="email"
+                            defaultValue={"Correo"}
                         />
                     </div>
                     <div className="field">
@@ -61,6 +63,7 @@ const RegisterStaff = () => {
                         <input required
                             type="password"
                             name="password"
+                            defaultValue={"Contraseña"}
                         />
                     </div>
                     <div className="field">
@@ -68,6 +71,7 @@ const RegisterStaff = () => {
                         <input required
                             type="text"
                             name="role"
+                            defaultValue={"Puesto"}
                         />
                     </div>
                     <div className="submit">

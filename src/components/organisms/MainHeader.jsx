@@ -1,8 +1,8 @@
-import MainMenu from "../molecules/MainMenu"
 
-const MainHeader = () => {
+const MainHeader = ({children}) => {
     return(
-       <MainMenu />
+        //logo
+       [children]
     )
 }
 

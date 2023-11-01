@@ -9,7 +9,7 @@ const Form = () => {
     const params = useParams()
     const nav = useNavigate()
     
-    const [product, setProduct] = useState()
+    const [product, setProduct] = useState([])
     const [error, setError] = useState()
 console.log(params)
 
@@ -19,11 +19,11 @@ console.log(params)
                 headers: {
                     Authorization: `Bearer ${token()}`,
                   },
-            })
-            .then(resp =>{
-                setProduct(resp.data)
-            })
-            .catch(err=> setError(err))
+                })
+                .then(resp =>{
+                    setProduct(resp.data)
+                })
+                .catch(err=> setError(err))
         }
     },[])
 
@@ -66,7 +66,7 @@ console.log(params)
     }
 
     return (
-        <>
+        <>{console.log(product)}
             <section className="login-container">
                 <img src={image} alt="logo-Hamburger" />
                 <h1>

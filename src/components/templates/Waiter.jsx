@@ -2,13 +2,13 @@
 
 import { Outlet } from "react-router-dom"
 import MainHeader from "../organisms/MainHeader"
-import MainMenu from "../molecules/MainMenu"
+import WaiterMenu from "../molecules/WaiterMenu"
 
-const App = () => {
+const Waiter = () => {
   return (
     <div>
         <MainHeader >
-          <MainMenu/>
+          <WaiterMenu />
         </MainHeader>
         <div className="Poner espacio para bajar los componentes">
           <Outlet />
@@ -17,4 +17,4 @@ const App = () => {
   )
 }
 
-export default App
+export default Waiter

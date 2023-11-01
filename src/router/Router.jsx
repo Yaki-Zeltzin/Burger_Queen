@@ -8,6 +8,7 @@ import RegisterStaff from "../components/pages/RegisterStaff"
 import PageWorkers from "../components/pages/PageWorkers"
 import Form from "../components/pages/admin/products/Form"
 import Table from "../components/pages/admin/products/Table"
+import Admin from "../components/templates/Admin"
 
 const router = createBrowserRouter([
     {
@@ -30,24 +31,31 @@ const router = createBrowserRouter([
         element: <Login />,
     },
     {
-        path: "/register",
-        element: <RegisterStaff />,
-    },{
-        path: "/pageWorkers",
-        element: <PageWorkers />,
-    },
-    {
-        path: "/admin/products",
-        element: <Table />,
-    },
-    {
-        path: "/admin/addProducts",
-        element: <Form />,
-    },
-    {
-        path: "/admin/products/:id",
-        element: <Form />,
-    },
+        path: "/admin",
+        element: <Admin />,
+        children: [
+            {
+                path: "/admin/register",
+                element: <RegisterStaff />,
+            },
+            {
+                path: "/admin/pageWorkers",
+                element: <PageWorkers />,
+            },
+            {
+                path: "/admin/products",
+                element: <Table />,
+            },
+            {
+                path: "/admin/addProducts",
+                element: <Form />,
+            },
+            {
+                path: "/admin/products/:id",
+                element: <Form />,
+            },
+        ]
+    }
 ])
 
 export default router
