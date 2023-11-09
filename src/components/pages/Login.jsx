@@ -3,12 +3,15 @@ import axios from "axios"
 import { API_URL } from "../../constants/env"
 import { setToken } from "../../helpers/auth"
 import { useNavigate } from "react-router-dom"
-import { useState } from "react"
+import { useContext, useState } from "react"
+import { UserContext } from "../../context/UserContext"
 
 const Login = () => {
     const nav = useNavigate()
+    const {setUserData} = useContext(UserContext)
 
     const [error, setError] = useState()
+   
 
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -22,10 +25,11 @@ const Login = () => {
             .post(`${API_URL}/login`, data)
             .then(resp => {
                 setToken(resp.data.accessToken)
+                setUserData(resp.data.user)
                 if (resp.data.user.role === "waiter") {
                     nav("/")
                  } else if (resp.data.user.role === "admin") {
-                     nav("/admin/addProducts")
+                     nav("/")
                  } 
                  //else {
                 //     nav("/chef")
