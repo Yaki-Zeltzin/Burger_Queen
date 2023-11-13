@@ -1,8 +1,8 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
-import { API_URL } from "../../constants/env"
-import { token } from "../../helpers/auth"
+import { API_URL } from "../../../constants/env"
+import { token } from "../../../helpers/auth"
 
 const Product = () => {
     const params = useParams()

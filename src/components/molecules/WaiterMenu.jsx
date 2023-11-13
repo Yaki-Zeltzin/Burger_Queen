@@ -7,15 +7,20 @@ const WaiterMenu = () => {
 
     const handleSesion = () => {
         deleteToken()
-        nav("/login")
+        nav("/")
     }
 
     return (
         <nav className="container-header">
             <ul>
                 <li>
-                    <Link to="/Orders">
+                    <Link to="/waiter/orders">
                         Pedidos
+                    </Link>
+                </li>
+                <li>
+                    <Link to="/waiter/orderReady">
+                        Terminados
                     </Link>
                 </li>
                 <li>

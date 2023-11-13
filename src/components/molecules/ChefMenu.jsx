@@ -7,7 +7,7 @@ const ChefMenu = () => {
 
     const handleSesion = () => {
         deleteToken()
-        nav("/login")
+        nav("/")
     }
 
     return (
@@ -19,16 +19,10 @@ const ChefMenu = () => {
                     </Link>
                 </li>
                 <li>
-                    <Link to="/Kitchen/timeOrders">
-                        Tiempo
-                    </Link>
-                </li>
-                <li>
                     <a onClick={handleSesion}>
                         Cerrar sesión
                     </a>
                 </li>
-
             </ul>
         </nav>
     )

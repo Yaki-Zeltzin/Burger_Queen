@@ -1,9 +1,9 @@
 import axios from "axios"
-import { API_URL } from "../../constants/env"
-import { token } from "../../helpers/auth"
+import { API_URL } from "../../../constants/env"
+import { token } from "../../../helpers/auth"
 
 import { useEffect, useState } from "react"
-import ProductCard from "../molecules/ProductCard"
+import ProductCard from "../../molecules/ProductCard"
 
 const PageOrders = () => {
   const [data, setData] = useState([])

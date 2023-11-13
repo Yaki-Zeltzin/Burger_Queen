@@ -28,7 +28,7 @@ const Login = () => {
                 setToken(resp.data.accessToken)
                 setUserData(resp.data.user)
                 if (resp.data.user.role === "waiter") {
-                    nav("/")
+                    nav("/waiter/orders")
                  } else if (resp.data.user.role === "admin") {
                      nav("/admin/products")
                  } 

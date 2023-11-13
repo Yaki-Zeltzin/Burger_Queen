@@ -12,7 +12,7 @@ const MainMenu = () => {
    
     const handleSesion = () => {
         deleteToken()
-        nav("/login")
+        nav("/")
         setUserData()
     }
 
