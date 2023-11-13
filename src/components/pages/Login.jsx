@@ -31,10 +31,9 @@ const Login = () => {
                     nav("/waiter/orders")
                  } else if (resp.data.user.role === "admin") {
                      nav("/admin/products")
-                 } 
-                 //else {
-                //     nav("/chef")
-                // }
+                 } else if (resp.data.user.role === "chef"){
+                    nav("/kitchen/orders")
+                 }       
             })
             .catch(error => {
                 setError(error)

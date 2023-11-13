@@ -35,6 +35,10 @@ const router = createBrowserRouter([
         element: <Login />,
     },
     {
+        path: "/pageNotFound",
+        element: <Error404 />,
+    },
+    {
         path: "/admin",
         element: <Admin />,
         children: [
