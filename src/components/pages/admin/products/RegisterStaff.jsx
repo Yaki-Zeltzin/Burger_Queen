@@ -1,8 +1,8 @@
 import axios from "axios"
-import image from "../../assets/images/logo1.png"
-import { API_URL } from "../../constants/env"
-import { token } from "../../helpers/auth"
-import "../../styles/index.css"
+import image from "../../../../assets/images/logo1.png"
+import { API_URL } from "../../../../constants/env"
+import { token } from "../../../../helpers/auth"
+import "../../../../styles//index.css"
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 

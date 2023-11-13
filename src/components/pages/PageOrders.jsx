@@ -28,6 +28,7 @@ const PageOrders = () => {
     {data.map((prod) => (
      <ProductCard 
       key={prod.id} 
+      id={prod.id}
       name={prod.name}
       price={prod.price}
       image={prod.image}

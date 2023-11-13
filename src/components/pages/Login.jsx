@@ -15,6 +15,7 @@ const Login = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault()
+
         setError()
         const data = {
             email: e.target.email.value,
@@ -29,7 +30,7 @@ const Login = () => {
                 if (resp.data.user.role === "waiter") {
                     nav("/")
                  } else if (resp.data.user.role === "admin") {
-                     nav("/")
+                     nav("/admin/products")
                  } 
                  //else {
                 //     nav("/chef")
@@ -42,7 +43,7 @@ const Login = () => {
 
     return (
         <div className="login-container">
-            <img alt="logo-hamburger" />
+            <img alt="logo1.png" />
             <h1>Iniciar sesión</h1>
             <form onSubmit={handleSubmit}>
                 <div className="field">

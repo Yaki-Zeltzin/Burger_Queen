@@ -8,7 +8,7 @@ const UserContext = createContext() //información
 const UserProvider = ({children}) => { //provee el contexto
 
     const [userData, setUserData] = useState()
-console.log(userData)
+
     useEffect(()=> {
         if(token){
             axios.get(`${API_URL}/users`, {

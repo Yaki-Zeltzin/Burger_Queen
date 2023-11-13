@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom"
 
-
 const ProductCard = ({id, image, name, price}) => {
     return (
         <article className="product" key={id}>
@@ -13,6 +12,7 @@ const ProductCard = ({id, image, name, price}) => {
             </Link>
             <p className="item-product">Producto: {name}
                 <span> ${price}</span></p>
+                <p>id: {id}</p>
         </article>
     )
 }

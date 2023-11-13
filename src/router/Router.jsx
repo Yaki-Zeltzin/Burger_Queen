@@ -2,23 +2,23 @@ import { createBrowserRouter } from "react-router-dom"
 import Error404 from "../components/pages/Error404"
 import App from "../components/templates/App"
 import Login from "../components/pages/Login"
-import PageOrders from "../components/pages/PageOrders"
 import CookPage from "../components/pages/CookPage"
-import RegisterStaff from "../components/pages/RegisterStaff"
-import PageWorkers from "../components/pages/PageWorkers"
+import RegisterStaff from "../components/pages/admin/products/RegisterStaff"
+import PageWorkers from "../components/pages/admin/products/PageWorkers"
 import Form from "../components/pages/admin/products/Form"
 import Table from "../components/pages/admin/products/Table"
 import Admin from "../components/templates/Admin"
+import Product from "../components/pages/Product"
 
 const router = createBrowserRouter([
     {
         path: "/",
         element: <App />,
         errorElement: <Error404 />,
-        children:[
+        children:[ 
             {
-                index: true,
-                element: <PageOrders />,
+                path: "/products/:id",
+                element: <Product />,
             },
             {
                 path: "/mealPrep",
@@ -27,7 +27,7 @@ const router = createBrowserRouter([
         ]
     },
     {
-        path: "/login",
+        index: "/",
         element: <Login />,
     },
     {
@@ -55,7 +55,8 @@ const router = createBrowserRouter([
                 element: <Form />,
             },
         ]
-    }
+    },
+
 ])
 
 export default router

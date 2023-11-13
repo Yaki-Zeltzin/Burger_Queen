@@ -30,7 +30,7 @@ const AdminMenu = () => {
                 </li>
                 <li>
                     <Link to="/admin/products">
-                        Home
+                        Ver Productos
                     </Link>
                 </li>
                 <li>
